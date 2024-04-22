@@ -148,7 +148,7 @@ function play(){
         document.addEventListener('keydown', (e) => {
             if(e.key == 'ArrowUp' || e.key == ' '){
                 if (game_state === 'Play') {
-                    img.src = 'images/Bird-2.png';
+                    img.src = 'images/bird-2.png';
                     bird_dy = -7.6;
                 }
             }
@@ -157,7 +157,7 @@ function play(){
         document.addEventListener('keyup', (e) => {
             if(e.key == 'ArrowUp' || e.key == ' '){
                 if (game_state === 'Play') {
-                    img.src = 'images/Bird.png';
+                    img.src = 'images/bird.png';
                 }
             }
         });

@@ -77,9 +77,9 @@ function showQuestionPopup() {
     });
 }
 
-// Mendengarkan tombol Enter untuk memulai permainan
-document.addEventListener('keydown', (e) => {
-    if(e.key == 'Enter' && game_state != 'Play'){
+// Mendengarkan sentuhan layar untuk memulai permainan
+document.addEventListener('touchstart', () => {
+    if(game_state != 'Play'){
         if(game_state === 'End') {
             // Reset skor saat game over
             current_score = 0;

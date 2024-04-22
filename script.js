@@ -79,8 +79,8 @@ function showQuestionPopup() {
 
 // Mendengarkan sentuhan layar untuk memulai permainan
 document.addEventListener('touchstart', () => {
-    if(game_state != 'Play'){
-        if(game_state === 'End') {
+    if (game_state != 'Play') {
+        if (game_state === 'End') {
             // Reset skor saat game over
             current_score = 0;
             score_val.innerHTML = current_score;
@@ -144,23 +144,6 @@ function play(){
     function applyGravity(){
         if(game_state != 'Play') return;
         bird_dy = bird_dy + gravity;
-        // Menggerakkan burung ke atas ketika tombol panah atas atau spasi ditekan
-        document.addEventListener('keydown', (e) => {
-            if(e.key == 'ArrowUp' || e.key == ' '){
-                if (game_state === 'Play') {
-                    img.src = 'images/bird-2.png';
-                    bird_dy = -7.6;
-                }
-            }
-        });
-
-        document.addEventListener('keyup', (e) => {
-            if(e.key == 'ArrowUp' || e.key == ' '){
-                if (game_state === 'Play') {
-                    img.src = 'images/bird.png';
-                }
-            }
-        });
 
         // Deteksi tabrakan burung dengan atas dan bawah layar
         if(bird_props.top <= 0 || bird_props.bottom >= background.bottom){
